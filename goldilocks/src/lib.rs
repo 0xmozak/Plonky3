@@ -507,9 +507,18 @@ mod tests {
         let expected_result = -F::new(2_u64.pow(32)) - F::new(1);
         assert_eq!(y, expected_result);
 
-        assert_eq!(f.exp_u64(10_540_996_611_094_048_183).exp_const_u64::<7>(), f);
-        assert_eq!(y.exp_u64(10_540_996_611_094_048_183).exp_const_u64::<7>(), y);
-        assert_eq!(f_2.exp_u64(10_540_996_611_094_048_183).exp_const_u64::<7>(), f_2);
+        assert_eq!(
+            f.exp_u64(10_540_996_611_094_048_183).exp_const_u64::<7>(),
+            f
+        );
+        assert_eq!(
+            y.exp_u64(10_540_996_611_094_048_183).exp_const_u64::<7>(),
+            y
+        );
+        assert_eq!(
+            f_2.exp_u64(10_540_996_611_094_048_183).exp_const_u64::<7>(),
+            f_2
+        );
     }
 
     test_field!(crate::Goldilocks);

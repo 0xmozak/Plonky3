@@ -433,7 +433,10 @@ mod tests {
 
         assert_eq!(m1.exp_u64(1_717_986_917).exp_const_u64::<5>(), m1);
         assert_eq!(m2.exp_u64(1_717_986_917).exp_const_u64::<5>(), m2);
-        assert_eq!(F::two().exp_u64(1_717_986_917).exp_const_u64::<5>(), F::two());
+        assert_eq!(
+            F::two().exp_u64(1_717_986_917).exp_const_u64::<5>(),
+            F::two()
+        );
     }
 
     test_field!(crate::Mersenne31);
